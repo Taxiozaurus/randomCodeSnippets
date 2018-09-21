@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Lines</title>
+        <style>
+            html, body {
+                background-color: #aaa;
+                min-height: 100%;
+                min-height: 100vh;
+            }
+            #plane {
+                display: inline-block;
+                width: 500px;
+                height: 500px;
+                background-color: white;
+                position: relative;
+            }
+            button {
+                display: inline-block;
+            }
+            .side {
+                padding: 15px;
+                float: left;
+                min-width: 530px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="side">
+            <canvas id="plane" width="500" height="500">
+            </canvas>
+        </div>
+        <div class="side">
+            <div class="input-row">
+                <label>Revolutions</label>
+                <input type="number" value="5" onchange="rev=parseInt(this.value)+1;reset();">
+            </div>
+            <div class="input-row">
+                <label>External radius</label>
+                <input type="number" value="100" onchange="eRad=parseInt(this.value);reset();">
+            </div>
+            <div class="input-row">
+                <label>Inner radius</label>
+                <input type="number" value="50" onchange="iRad=parseInt(this.value);reset();">
+            </div>
+            <br>
+            <button type="button" onclick="reset();">Reset</button>
+            <button type="button" onclick="start();">Start</button>
+            <button type="button" onclick="stop();">Stop</button>
+        </div>
+        <script>
+            var k = 50000;
+            var i = 1;
+            var plane = document.getElementById('plane');
+            var ctx = plane.getContext('2d');
+            ctx.fillStyle = '#000000';
+            var loop;
+            var z = 0;
+            var rev = 6;
+            var iRad = 50;
+            var eRad = 100;
+
+            function circle(z, r, x, y) {
+                return {
+                    x: Math.sin(z) * r + x,
+                    y: Math.cos(z) * r + y
+                };
+            }
+
+            function stop() {
+                clearInterval(loop);
+            }
+            function start() {
+                loop = setInterval(function() {
+                    var c = circle(z, iRad, 250, 250);
+                    var c2 = circle(z * rev, eRad, c.x, c.y);
+
+                    ctx.fillRect(c2.x, c2.y, 2, 2);
+
+                    z += 0.001;
+                    if (z > Math.PI * 2) {
+                        clearInterval(loop);
+                        console.log('Done');
+                    }
+                }, i);
+            }
+            function reset() {
+                ctx.clearRect(0, 0, plane.width, plane.height);
+                z = 0;
+            }
+        </script>
+    </body>
+</html>
