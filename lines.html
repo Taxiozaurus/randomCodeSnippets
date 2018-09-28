@@ -58,6 +58,7 @@
             var rev = 6;
             var iRad = 50;
             var eRad = 100;
+            reset();
 
             function circle(z, r, x, y) {
                 return {
@@ -85,6 +86,8 @@
             }
             function reset() {
                 ctx.clearRect(0, 0, plane.width, plane.height);
+                ctx.fillRect(249, 0, 2, 500);
+                ctx.fillRect(0, 249, 500, 2);
                 z = 0;
             }
         </script>
