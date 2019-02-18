@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Test</title>
+	</head>
+	<body>
+		<div id="container">
+			<input type="number" id="loopNumber" step="1">
+			<button onclick="doStuff();">Run</button>
+		</div>
+		<div id="loopOutput"></div>
+		<script>
+			var loopNum = document.getElementById('loopNumber');
+			var loopOut = document.getElementById('loopOutput');
+
+			// if we click on the run button too many times
+			// we need a way to stop execution of last loop, timekeeper will contain
+			// the function waiting on a timeout until its execution
+			var timekeeper;
+			
+			// Using setTimeout
+			function doStuff(currentNum) {
+				currentNum = currentNum || 1;
+				if (currentNum == 1) {
+					// note that innerHtml is only used to clean out contents of the element
+					// it is still a bad way to do this though
+					loopOut.innerHTML = '';
+				}
+
+				// remove a function from the timeout queue
+				clearTimeout(timekeeper);
+
+				// grab the int value from loopNum input
+				loopEnd = parseInt(loopNum.value);
+				
+				// Verify that we are still in the loop
+				if (currentNum > loopEnd) {
+					return true;
+				}
+				// If we are printing 2nd line then add new line first
+				if (currentNum > 1) {
+					loopOut.appendChild(document.createElement('br'));
+				}
+				// print new number
+				loopOut.appendChild(document.createTextNode(currentNum));
+				
+				// because we are using setTImeout, nesting is not a problem
+				// setTimeout executes in a new context that is not linked to "parent" function
+				// thus no recursion nesting is present
+				// params here are: function to run, delay in ms, argument(s) to pass to function
+				timekeeper = setTimeout(doStuff, 10, ++currentNum);
+			}
+		</script>
+	</body>
+</html>

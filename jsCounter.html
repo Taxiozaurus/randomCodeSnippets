@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Test</title>
+	</head>
+	<body>
+		<div>
+			<input type="number" id="loopNumber" step="1">
+			<button onclick="runCode();">Run</button>
+		</div>
+		<div id="loopOutput"></div>
+
+		<script>
+		var loopNumber = document.getElementById('loopNumber');
+		var loopOutput = document.getElementById('loopOutput');
+
+		var timekeeper;
+
+		function runCode(currentNumber) {
+			currentNumber = currentNumber || 1;
+			var loopEndNumber = parseInt(loopNumber.value, 10);
+			
+			clearTimeout(timekeeper);
+
+			if (currentNumber > loopEndNumber || !loopNumber.value.length) { return true; }
+
+			if (currentNumber == 1) { loopOutput.innerHTML = ''; }
+			if (currentNumber > 1) { loopOutput.appendChild(document.createElement('br')); }
+			loopOutput.appendChild(document.createTextNode(currentNumber));
+
+			timekeeper = setTimeout(runCode, 10, ++currentNumber);
+		}
+
+		</script>
+
+	</body>
+</html>

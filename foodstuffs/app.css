@@ -1,0 +1,77 @@
+* {
+	font-family: 'Arsenal', sans-serif;
+}
+
+.item, footer, header {
+	background-color: #D3D4C4;
+	border: 3px solid black;
+	border-radius: 15px;
+	margin-top: 10px;
+}
+
+header, footer {
+	padding: 10px;
+}
+
+header {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+header > * {
+	display: inline-block;
+	width: 30%;
+}
+
+header form * {
+	float: right;
+	display: inline-block;
+}
+
+header form button {
+	background: none;
+	border: none;
+}
+
+.item img {
+	width: 100% !important;
+	border-radius: 15px;
+}
+
+.items {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	justify-items: stretch;
+}
+
+.item {
+	grid-column-start: auto;
+	grid-column-end: span 1;
+	grid-row-start: auto;
+	grid-row-end: span 1;
+	margin: 10px 2px;
+}
+
+.item label {
+	font-size: 24px;
+	display: block;
+	text-align: center;
+	margin: 10px auto;
+}
+
+.item .title {
+	font-weight: bold;
+}
+
+@media (min-width: 851px) {
+	.items {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 1201px) {
+	.items {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

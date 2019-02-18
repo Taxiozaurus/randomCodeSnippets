@@ -1,0 +1,31 @@
+type	latitude	longitude	name	desc	color
+W	40.7541163	-73.9829620	new york from meta info, i think		#00ffff
+W	40.7699508	-75.1742659	new jersey, don't know where this is from.		#00ff00
+W	37.7401333	-122.4000976	san fran, from morse		#00ff00
+W	40.5486296	-124.1452750	possible place of interest.		#ff0000
+W	39.9520531	-75.1735094	phiily, from meta data		#8c008c
+
+type	latitude	longitude	name	desc	color
+T	40.7541194	-73.9830521	triangle one, new york, philly, and jersey.	Length: 326.3 km (202.8 mi)	#0000ff
+T	40.7699467	-75.1742511
+T	39.9520338	-75.1734347
+T	40.7540604	-73.9829878
+
+type	latitude	longitude	name	desc	color
+T	37.7400951	-122.3999343	triangle two, with fortuna cali, jersey, and philly.	Length: 8180 km (5083 mi)	
+T	39.9523451	-75.1741856
+T	40.7699415	-75.1743214
+T	37.7401796	-122.3999431
+
+type	latitude	longitude	name	desc	color
+T	37.7401563	-122.4000609	triangle three cali,jersey, and new york.	Length: 8270 km (5139 mi)	#ffff00
+T	40.7699378	-75.1742820
+T	40.7540879	-73.9830264
+T	37.7401573	-122.4000615
+
+type	latitude	longitude	name	desc	color
+T	37.7401332	-122.4000672	triangle four, fortuna, philly, and new york.	Length: 8323 km (5172 mi)	#00cc66
+T	39.9521898	-75.1739059
+T	40.7540945	-73.9829798
+T	37.7401444	-122.4000622
+

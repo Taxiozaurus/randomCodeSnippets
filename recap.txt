@@ -1,0 +1,61 @@
+When you format Errorlog txt correctly it shows roman numerals 
+
+I
+XXII, XXIII, XXIV
+LXV
+LXXXIV , LXXXV
+CIII
+CXLII, CXLIII, CXLVI
+
+1
+22, 23, 24
+65
+84, 85
+103
+142, 143, 146
+
+The Commas could be important. 
+The roman numerals are made up of numbers and letters, the numbers from left to right are 
+57127772157177775571712227777777777727525275171577211512
+
+
+
+From the Tweetanswers that Warframe did today
+feeltheweightofwhatweowefeeltheweight?fwhatwe?wefeelthewe?ghtofwhatweowefeeltheweightofwhatweowefeeltheweightofwhatweowefeeltheweightofwhatweowe
+we get with THIS encoder http://holloway.co.nz/steg/
+the password "openthehorn" for the pdf file "6rhe84.pdf" that solaris sent with the errorlog
+
+IN the pdf file is a hidden paragraph (the top layer is just random lorem ipsum text, the secret is layered behind that),
+ and some letters are replaced by numbers "31423837503" 
+is the sequence from left to right
+
+running the pdf through another converter reveals
+fffhhlhlllbbddiiiiiOOTtttttt?teeeeeeesssoooooPnmnnrrrrraaraaaacGGuuw?uz.. <- not confirmed yet, only rumours
+
+
+Numbersequences to work with on pdf:
+31423837503
+57127772157177775571712227777777777727525275171577211512
+6rhe84 enigma "spy"
+Primetime ending screen (5times repeated) 11222324658485103142143146161
+This would add a 1 in front and a 161 (CLXI) in the end
+
+1
+22, 23, 24
+65
+84, 85
+103
+142, 143, 146
+
+Hidden Paragraph:
+The right group of Outworlders creates a tribe, one that is full of ambition and zeal. 
+Take to the snow, show them who we are. Assemble and bring back the flare. 
+First and only first. Head these words. 
+
+Numbered words from the PDF G3ntleman 1n 4ladyship Improve2d f3et favour8ble assur3 7horoughly a5pplauded C0nsider 3may
+
+
+UNSOLVED: 
+Pdf file name, 
+Roman numerals, 
+Hidden paragraph (possible something ingame?)
