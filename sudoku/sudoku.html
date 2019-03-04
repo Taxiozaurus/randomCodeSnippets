@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sudoku</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script src="app.js" async></script>
+</head>
+<body>
+    <div id="inputs">
+        <select id="difficultySelector">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <button type="button" id="generateButton">Generate</button>
+        <button type="button" id="validateButton">Validate</button>
+    </div>
+    <div id="sudokuBoard">
+        <div id="status">
+            <div id="successBanner">
+                Success! You have solved the board!
+            </div>
+            <p>
+                Board ID: 
+                <label id="sudokuId"></label>
+            </p>
+        </div>
+        <table id="sudoku" cellspacing="0"></table>
+    </div>
+</body>
+</html>

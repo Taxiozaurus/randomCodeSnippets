@@ -1,0 +1,122 @@
+*, body, html {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+#sudoku, #sudoku tr, #sudoku td {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+#sudoku {
+	border: 2px solid black;
+	width: 100%;
+}
+#sudoku tr:not(:last-child) td {
+	border-bottom: 1px solid black;
+}
+#sudoku tr td:not(:last-child) {
+	border-right: 1px solid black;
+}
+#sudoku tr:nth-child(3n):not(:last-child) td {
+	border-bottom: 2px solid black;
+}
+#sudoku tr td:nth-child(3n):not(:last-child) {
+	border-right: 2px solid black;
+}
+#sudoku td input {
+	padding: 0;
+	margin: 0;
+	border: none;
+	width: 100%;
+	height: 2.5em;
+	text-align: center;
+	font-weight: bold;
+	transition: background-color .5s;
+}
+#sudoku td input.warning {
+	background-color: #dca;
+}
+#sudoku td input.error {
+	background-color: #e56;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0;
+}
+#sudoku td input:focus {
+	outline: none;
+}
+#sudoku td input[readonly="readonly"] {
+	background-color: #eee;
+}
+#inputs {
+	width: 100%;
+	background-color: #ddd;
+	padding: 15px 25px;
+}
+#inputs select, #inputs button {
+	height: 3em;
+	padding: 10px;
+	font-size: 1em;
+}
+#sudokuBoard {
+	width: 90%;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+#validateButton {
+	 float: right;
+}
+#status {
+	position: relative;
+}
+#successBanner {
+	border: 1px solid green;
+	color: green;
+	background-color: #ae9;
+	padding: 10px;
+	display: none;
+	opacity: 0;
+	transition: opacity .5s;
+	position: absolute;
+	top: 10em;
+	width: 80%;
+	left: 10%;
+	text-align: center;
+}
+#successBanner.show {
+	display: initial;
+	opacity: 1;
+}
+@media (min-width: 500px) {
+	#sudokuBoard {
+		width: 70%;
+	}
+}
+@media (min-width: 700px) {
+	#sudokuBoard {
+		width: 60%;
+	}
+	#inputs {
+		padding: 15px 100px;
+	}
+}
+@media (min-width: 800px) {
+	#sudoku td input {
+		height: 3em;
+	}
+}
+@media (min-width: 950px) {
+	#sudoku td input {
+		height: 3.5em;
+	}
+	#sudokuBoard {
+		width: 600px;
+	}
+	#inputs {
+		padding: 15px 25%;
+	}
+}
