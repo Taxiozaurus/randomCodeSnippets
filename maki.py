@@ -1,5 +1,6 @@
 import string
 
+# Fancy word indexing program
 
 def get_file():
     file_name = input("Document collection: ")

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Script directory resolver
+
 # Get real script location
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink

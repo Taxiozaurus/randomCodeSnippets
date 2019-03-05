@@ -1,3 +1,4 @@
+# Prototype for TileTraveller2.py
 
 maze = """x x x
  @@@ 

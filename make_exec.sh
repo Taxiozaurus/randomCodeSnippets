@@ -1,4 +1,5 @@
 #!/bin/bash
+# Should make all .sh files in supplied path executable
 
 count="$#"
 if [[ count -eq 0 ]]
